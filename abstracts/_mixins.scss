@@ -1,0 +1,24 @@
+@mixin flex-center($direction: row, $justify: center, $align: center, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+// Drop down animacija
+@mixin dropDown($duration: 1.5s, $ease: ease-out, $forwards: forwards) {
+  animation: dropDown $duration $ease $forwards;
+  opacity: 0;
+}
+
+@keyframes dropDown {
+  0% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(600px);
+  }
+}

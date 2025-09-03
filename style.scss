@@ -1,0 +1,45 @@
+@import "./abstracts/mixins";
+@import "./base/colors";
+@import "./base/reset";
+
+body {
+    background: url("media/park.jpg") no-repeat center center fixed;
+    background-size: cover;
+
+  @include flex-center(column, center, center);
+}
+
+.container {
+  @include flex-center(row, center, center, 20px);
+}
+
+.box {
+  width: 200px;
+  height: 150px;
+  border: 3px solid $white;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+
+  @include flex-center();
+  @include dropDown();
+}
+
+.box1 { 
+  background-color: $black-60;
+  color: $white;
+}
+
+.box2 { 
+  background-color: $red-60; 
+  color: $white;
+}
+
+.box3 { 
+  background-color: $gold-50;
+  color: $white;
+}
+
+.box:nth-child(1) { animation-delay: 0s; }
+.box:nth-child(2) { animation-delay: 1.5s; }
+.box:nth-child(3) { animation-delay: 3s; }
